@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build Path: /app/.heroku/php/
-# Build Deps: libraries/zlib, libraries/libmcrypt, libraries/icu, libraries/gettext
+# Build Deps: libraries/zlib, libraries/libmcrypt, libraries/icu, libraries/gettext, libraries/libgmp
 
 OUT_PREFIX=$1
 
@@ -45,6 +45,7 @@ LD_LIBRARY_PATH=${OUT_PREFIX} ./configure \
     --with-bz2 \
     --with-curl \
     --with-mcrypt=${OUT_PREFIX} \
+    --with-gmp=${OUT_PREFIX} \
     --with-pdo-mysql \
     --with-mysqli \
     --with-openssl \
