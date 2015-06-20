@@ -15,6 +15,7 @@ dep_archive_name=${dep_dirname}.tar.lz
 dep_url=https://gmplib.org/download/gmp/${dep_version}/${dep_archive_name}
 
 echo "-----> Building libgmp ${dep_version}..."
+echo "-----> Download from ${dep_url}..."
 
 curl -L ${dep_url} | tar --lzip -x
 
